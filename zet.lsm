@@ -1,0 +1,25 @@
+Begin3
+Title:          zet
+Version:        1.0
+Entered-date:   22MAY98
+Description:    Heavy duty harddisk check. A file in the filesystem, a
+                partition on a disk or even a hole disk (in fact any
+				file) will be written with crc-checked random-filled
+				buffers. in the second stage those blocks will be
+				randomly read from the file an the crc-sum checked.
+				also several times new blocks are written. errors are
+				logged. this programm simulates a usal harddiskacess
+				under a heavyly loaded system and brings up bugs in
+				the os, the hardware or even the firmware of the
+				harddisk.
+Keywords:       harddiskcheck burn-in firmwarebug
+Author:         mdt@emdete.de (Michael Dietrich)
+Maintained-by:  mdt@emdete.de (Michael Dietrich)
+Primary-site:   emdete.de /src
+                1kB zet-1.0.tgz
+Alternate-site: 
+Original-site:  
+Platforms:      Any operating system that uses regular files for
+                harddiskacess.
+Copying-policy: "GPL"
+End

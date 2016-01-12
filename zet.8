@@ -1,0 +1,71 @@
+.\" -*- nroff -*-
+.TH Z 1 "22 May 1998" "Debian GNU/Linux"
+.SH NAME
+zet \- check a harddisk
+.SH SYNOPSIS
+.B zet -f file [-l blocks] [-b blocks] [-s] [-n] [-q]
+
+.SH DESCRIPTION
+.B zet
+Heavy duty harddisk check. A file in the filesystem, a partition on a
+disk or even a hole disk (in fact any file) will be written with
+crc-checked random-filled buffers. in the second stage those blocks
+will be randomly read from the file an the crc-sum checked.  also
+several times new blocks are written. errors are logged. this programm
+simulates a usal harddiskacess under a heavyly loaded system and
+brings up bugs in the os, the hardware or even the firmware of the
+harddisk.
+
+.SH "COMMAND\-LINE OPTIONS"
+
+.TP 0.5i
+.B -f file
+give the file to write into.
+
+.TP 0.5i
+.B -l blocks
+set the size of the file in count of 512-byte blocks. this may be
+necessary if you don't write into a file with an definitive end (as a
+partition or a whole disk).
+
+.TP 0.5i
+.B -b count
+set the blocksize to 
+.B count
+512-byte blocks.
+
+.TP 0.5i
+.B -s
+switch on sync mode. this sync each block immediatly after writing.
+
+.TP 0.5i
+.B -n
+skip the initial stage, where the blocks are written. only useful, if
+this was done before with this file.
+
+.TP 0.5i
+.B -q
+does a sequencial check before going to the second (random seek,
+read/write) stage.
+
+.SH HISTORY
+
+the name 'zet' was choosen, 'cause z is the last letter and zet was my
+last chance to proof a real harddiskfailure.
+
+.SH BUGS/LIMITATIONS
+
+.B zet
+can't handle badblocks on a disk.
+
+.B zet
+can't handle files larger than a 'long' can take.
+
+.B zet
+doesn't get the filesize when -n given.
+
+.SH AUTHOR
+mdt@mdt.in-berlin.de (Michael Dietrich)
+
+.SH SEE ALSO
+fdisk(8) cfdisk(8) badblocks(8)
