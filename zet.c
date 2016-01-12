@@ -1,6 +1,6 @@
 /*
     harddisk check program 'zet'.
-    Copyright (C) 1998 Michael Dietrich <mdt@mdt.in-berlin.de
+    Copyright (C) 1998 Michael Dietrich <mdt@pyneo.org>
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
