@@ -111,8 +111,7 @@ int r = 1;
 	return r;
 }
 
-int main(int argc, char* argv[])
-{
+int main(int argc, char* argv[]) {
 int argi;
 struct buftype* buffer = NULL;
 int f = -1;
@@ -220,8 +219,7 @@ help:
 			exit(errno);
 		}
 		off64_t pos;
-		do
-		{
+		do {
 			pos = tell64(f);
 			printf("write at %ld       \r", pos);
 			fflush(stdout);
